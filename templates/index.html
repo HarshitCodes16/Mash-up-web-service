@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mashup Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #1e3c72, #2a5298);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: rgba(0,0,0,0.4);
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+        }
+
+        input {
+            background: #f1f1f1;
+        }
+
+        button {
+            background: #00c6ff;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #00a2d6;
+        }
+
+        .loader {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .spinner {
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #00c6ff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+    </style>
+
+    <script>
+        function showLoader() {
+            document.getElementById("formDiv").style.display = "none";
+            document.getElementById("loaderDiv").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+<div class="card">
+
+    <div id="formDiv">
+        <h2>🎧 Mashup Generator</h2>
+
+        <form method="post" onsubmit="showLoader()">
+            <input name="singer" placeholder="Singer Name" required>
+            <input name="num" type="number" placeholder="Number of Videos" required>
+            <input name="duration" type="number" placeholder="Duration (seconds)" required>
+            <input name="email" placeholder="Your Email" required>
+
+            <button type="submit">Generate Mashup</button>
+        </form>
+    </div>
+
+    <div id="loaderDiv" class="loader">
+        <h3>⏳ Creating your mashup...</h3>
+        <p>This may take a few minutes</p>
+        <div class="spinner"></div>
+    </div>
+
+</div>
+
+</body>
+</html>

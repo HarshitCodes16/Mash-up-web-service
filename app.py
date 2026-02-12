@@ -5,11 +5,12 @@ import re
 import shutil
 import os
 import smtplib
+import os
 from email.message import EmailMessage
 from mashup import create_mashup
 
-SENDER_EMAIL = "hkatyal_be23@thapar.edu"
-SENDER_PASSWORD = "orre efan rgus rmqv"   # your app password
+SENDER_EMAIL = os.getenv("SENDER_EMAIL", "") # your email address
+SENDER_PASSWORD = os.getenv("SENDER_PASSWORD", "") # your email password or app password
 
 app = Flask(__name__)
 

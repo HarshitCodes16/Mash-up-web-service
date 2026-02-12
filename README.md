@@ -106,7 +106,7 @@ python 102303276.py "Sharry Maan" 20 30 output.mp3
 
 > Mashup ZIP received on email:
 
-![Email Output](mail.jpeg)
+![Email Output](mail.png)
 
 
 # Course Information

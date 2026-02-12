@@ -98,7 +98,7 @@ python 102303276.py "Sharry Maan" 20 30 output.mp3
 
 > Mashup Generator Web UI:
 
-![Web UI](web_app.png)
+![Web UI](web-ui.png)
 
 ---
 
@@ -106,7 +106,7 @@ python 102303276.py "Sharry Maan" 20 30 output.mp3
 
 > Mashup ZIP received on email:
 
-![Email Output](mail_confirm.jpeg)
+![Email Output](mail.jpeg)
 
 
 # Course Information

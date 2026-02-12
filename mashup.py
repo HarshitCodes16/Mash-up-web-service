@@ -25,7 +25,7 @@ def create_mashup(singer, num_videos, duration, output_file):
     }
 
     with YoutubeDL(ydl_opts) as ydl:
-        ydl.download([f"ytsearch{num_videos}:{singer} songs"])
+        ydl.download([f"scsearch{num_videos}:{singer} songs"])
 
     print("✂️ Trimming audio...")
 
